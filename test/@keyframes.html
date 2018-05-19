@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>keyframes</title>
+    <style>
+        div
+        {
+            width:100px;
+            height:100px;
+            background:red;
+            position: absolute;
+            animation:myfirst 5s;
+            -webkit-animation: myfirst 5s;
+            /*animation:myfirst 5s;*/
+            /*-webkit-animation:myfirst 5s; /!* Safari and Chrome *!/*/
+        }
+        @keyframes myfirst {
+            0%{
+                background-color: red;
+                top: 0;
+                left: 0;
+            }
+            25%{
+                background-color: yellow;
+                top: 0;
+                left: 10px;
+            }
+            50%{
+                background-color: antiquewhite;
+                top: 10px;
+                left: 10px;
+            }
+            75%{
+                background-color: aqua;
+                top: 10px;
+                left: 0px;
+            }
+            100%{
+                background-color: azure;
+                top: 0px;
+                left: 0px;
+            }
+        }
+
+
+        -wibkie-@keyframes myfirst {
+            0%{
+                background-color: red;
+                top: 0;
+                left: 0;
+            }
+            25%{
+                background-color: yellow;
+                top: 0;
+                left: 100px;
+            }
+            50%{
+                background-color: antiquewhite;
+                top: 10px;
+                left: 10px;
+            }
+            75%{
+                background-color: aqua;
+                top: 10px;
+                left: 0px;
+            }
+            100%{
+                background-color: azure;
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<p><b>注意:</b> 该实例在 Internet Explorer 9 及更早 IE 版本是无效的。</p>
+
+<div></div>
+
+</body>
+</html>

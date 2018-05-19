@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>个人网站</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <style>
+
+
+        /*轮播开始*/
+
+        .banner{
+            overflow: hidden;
+            width: 1518px;
+            height: 808px;
+            position: relative;
+        }
+        .banner .left {
+            width: 100%;
+            height: 808px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url("images/1.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            z-index: 1;
+        }
+        .banner .right{
+            width: 100%;
+            height: 808px;
+            position: absolute;
+            top: 0;
+            left: 1518px;
+            background-image: url("images/2.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .banner .left span:nth-of-type(1),.banner .right span:nth-of-type(1){
+            display:block;
+            font-size: 60px;
+            margin-top: 20%;
+            margin-left: 25%;
+            color:rgba(255,255,255,1);
+        }
+        .banner .right span:nth-of-type(1){
+            margin-top: 20%;
+            margin-left: 20%;
+         }
+        .banner .left span:nth-of-type(2),.banner .right span:nth-of-type(2),.banner .right span:nth-of-type(3){
+            display:block;
+            font-size: 20px;
+            margin-top: 40px;
+            margin-left: 35%;
+            color:rgba(255,255,255,0.8);
+        }
+        .banner .right span:nth-of-type(2){
+            margin-top: 60px;
+            margin-left: 30%;
+        }
+        .banner .right span:nth-of-type(3){
+            margin-left: 28%;
+            color: rgba(255,255,255,0.9);
+        }
+        .banner .left a{
+            width: 180px;
+            height: 56px;
+            position: absolute;
+            top: 60%;
+            left: 47%;
+            margin-left: -56px;
+            border: 1px solid #f0f0f0;
+            text-align: center;
+            line-height: 56px;
+            font-size: 18px;
+            color: #f0f0f0;
+            text-decoration:none;
+        }
+
+        /*轮播结束*/
+        /*蒲公英开始*/
+        .showInfo{
+            height: 480px;
+            /*background-color: #333;*/
+            overflow: hidden;
+            margin-bottom: 45px;
+            border-bottom: 1px dashed #8f47ff;
+        }
+        .info {
+            margin: 60px auto;
+            text-align: center;
+        }
+        .info h3{
+            font-size: 35px;
+            color: #8f47ff;
+            display:block;
+            text-shadow: 1px 1px 1px #979699;
+        }
+        .info .text{
+            float: left;
+            width: 33%;
+            height: 300px;
+            /*border: 1px solid #333;*/
+            overflow: hidden;
+            margin-top: 60px;
+            font-size: 18px;
+            color: #333;
+        }
+        .info .text:nth-of-type(n){
+            position: relative;
+        }
+        .info .text:nth-of-type(1) span,.info .text:nth-of-type(3) span{
+            height: 100%;
+            width: 300px;
+            position: absolute;
+            top: 0;
+            left: -400px;
+            line-height: 35px;
+            opacity: 0.9;
+            cursor: progress;
+            /*background-color: rgba(219, 219, 219, 0.5);*/
+            box-shadow: 2px 2px 1px #fff;
+            /*margin-left: -35px;*/
+            transition: translate 2s;
+        }
+        .info .text:nth-of-type(2) span{
+            height: 100%;
+            width: 300px;
+            position: absolute;
+            top: 400px;
+            left: 0;
+            line-height: 35px;
+            opacity: 1;
+            cursor: progress;
+            /*background-color: rgba(219, 219, 219, 0.5);*/
+            box-shadow: 2px 2px 1px #fff;
+            margin-left: 50px;
+            transition: translateY 0.5s;
+        }
+        .info .text:nth-of-type(3) span{
+            left: 400px;
+        }
+        .info .text:nth-of-type(n) span:hover{
+            transform: translate(0,2px);
+            color: rgba(143, 71, 255, 1);
+            text-shadow: 1px 1px 1px #979699;
+        }
+        .info .text:nth-of-type(n) i{
+            font-size: 28px;
+
+        }
+        .info .text:nth-of-type(n) p{
+            padding-top: 10px;
+        }
+        /*蒲公英结束*/
+        /*路途开始*/
+        .pict{
+            /*height: 500px;*/
+            text-align: center;
+            overflow: hidden;
+            color: #b9ffc3;
+        }
+        .pict h2{
+            font-size: 35px;
+            display: block;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 1px #979699;
+        }
+        .pic{
+            float: left;
+            width: 33%;
+            height: 250px;
+            /*border: 1px solid #000;*/
+            margin-top: 10px;
+            margin-bottom: 2px;
+        }
+        .pic span{
+            margin: 0px auto;
+            display: block;
+            width: 80%;
+            height: 100%;
+            /*background-color: #8f47ff;*/
+            box-shadow: 1px 1px #ff7c74;
+            overflow: hidden;
+            /*position: relative;*/
+
+        }
+        .pic span img{
+            display: block;
+            width: 100%;
+            height: 70%;
+            transition: all 1s;
+        }
+        .pic:nth-of-type(1) span img:hover{
+            border-radius: 20%;
+            transform: scale(0.8);
+        }
+        .pic:nth-of-type(2) span img:hover{
+            border-radius: 20%;
+            transform: translate(0px,10px);
+        }
+        .pic:nth-of-type(3) span img:hover{
+            border-radius: 20%;
+            transform: scale(1.2);
+        }
+        .pic:nth-of-type(4) span img:hover{
+            border-radius: 20%;
+            transform: scale(1.2);
+        }
+        .pic:nth-of-type(5) span img:hover{
+            border-radius: 20%;
+            transform: translate(0px,10px);
+        }
+        .pic:nth-of-type(6) span img:hover{
+            border-radius: 20%;
+            transform: scale(0.8);
+        }
+        .pic span p {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #333;
+            position: relative;
+            transition: translateY 1s;
+            font-weight: 600;
+        }
+        .pic span p:hover{
+            color: #b9ffc3;
+            transform: translateY(2px);
+            /*color: rgba(143, 71, 255, 1);*/
+            text-shadow: 1px 1px 1px #979699;
+            cursor: progress;
+        }
+        .pic:nth-of-type(1) span p i{
+            text-decoration: none;
+            position: absolute;
+            top: 0;
+            left: -600px;
+        }
+        .pic:nth-of-type(6) span p i{
+            text-decoration: none;
+            position: absolute;
+            top: 0;
+            left: -600px;
+        }
+        .pic:nth-of-type(2) span p i{
+             text-decoration: none;
+             position: absolute;
+             top: -600px;
+             left: 0;
+         }
+        .pic:nth-of-type(5) span p i{
+            text-decoration: none;
+            position: absolute;
+            top: 600px;
+            left: 0;
+        }
+        .pic:nth-of-type(3) span p i{
+            text-decoration: none;
+            position: absolute;
+            top: 0;
+            left: 600px;
+        }
+        .pic:nth-of-type(4) span p i{
+            text-decoration: none;
+            position: absolute;
+            top: 0;
+            left: 600px;
+        }
+        /*路途结束*/
+        /*最后板块开始*/
+        .footer{
+            overflow: hidden;
+            margin-top: 40px;
+            border-top: 1px dashed #b9ffc3;
+            text-align:center;
+            position: relative;
+        }
+        .footer h2{
+            font-size: 35px;
+            display: block;
+            margin-bottom: 25px;
+            margin-top: 25px;
+            text-shadow: 1px 1px 1px #979699;
+            color: lightblue;
+        }
+        .footer>span{
+            display: block;
+            width: 33%;
+            height: 600px;
+            float: left;
+            /*border: 1px solid #b9ffc3;*/
+            position: relative;
+        }
+        .footer span:nth-of-type(1){
+            background-size: cover;
+        }
+        .footer span:nth-of-type(2){
+            position: relative;
+            overflow: hidden;
+        }
+        .footer span .top{
+            display: block;
+            height: 40%;
+            width: 100%;
+            background-image: url(images/19.jpg);
+            background-size: cover;
+
+        }
+        .footer span .bottom{
+            display: block;
+            margin-top: 10px;
+            margin-left: 10px;
+            font-size: 16px;
+            position: absolute;
+            top: 237px;
+            left: -400px;
+            height: 50%;
+            width: 100%;
+        }
+        .footer img{
+            display: block;
+            transtion:all 2s;
+        }
+        .footer img:hover{
+            margin-top: -3px;
+            box-shadow: 0 0 1px 0px #b9ffc3;
+        }
+        .footer h4{
+            font-size: 20px;
+            display: block;
+            text-align: center;
+            color: #8f47ff;
+            border-top: 1px dashed #8f47ff;
+            padding-top: 20px;
+            text-shadow: 2px 2px 1px #ff7c74;
+        }
+        .footer i{
+            float: left;
+            display: block;
+            width: 14px;
+            padding-left: 18px;
+            margin-top: 16px;
+            font-weight: 500;
+            font-size: 14px;
+            color: #333;
+            cursor:progress;
+        }
+        .footer i:hover{
+            color: #8f47ff;
+        }
+        /*最后板块结束*/
+        /*end*/
+        .end{
+            margin-top: 150px;
+            height: 300px;
+            /*background-color: red;*/
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .end span{
+            display: inline-block;
+            height: 1px;
+            border-top:1px inset #8f47ff ;
+            width: 33%;
+            margin-top: 50px;
+        }
+        .end h1{
+            display: inline-block;
+            margin-top: 40px;
+            font-size: 24px;
+            color: #8f47ff;
+
+        }
+        .end span:nth-of-type(1){
+            float: left;
+        }
+        .end span:nth-of-type(2){
+            float: right;
+        }
+        .end h2{
+            position: absolute;
+            top: 333px;
+            left: 50%;
+            margin-left: -35px;
+            font-size: 25px;
+            color: #8f47ff;
+            text-shadow: 1px 1px 1px #333;
+            cursor: progress;
+        }
+        .audio{
+            position: absolute;
+            z-index: 311;
+        }
+        .audio audio{
+            width: 100px;
+            opacity: 0.1;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="audio">
+        <audio autoplay loop>
+            <source src="music/yinyue.ogg"/>
+            <source src="music/yinyue.mp3"/>
+        </audio>
+    </div>
+    <!--头部开始-->
+    <div class="header">
+        <div class="w1200">
+            <div class="left">
+                <h1 class="fa fa-heart-o">Web Love</h1>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">love</a></li>
+                    <li><a href="#">Z</a></li>
+                    <li><a href="#">H</a></li>
+                    <li><a href="#">Y</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--头部结束-->
+    <!--轮播开始-->
+    <div class="banner">
+        <div class="left">
+            <span>星空下的约定，繁星美丽如你</span>
+            <span>用心制作网站，用爱传承未来，用努力说服自己</span>
+            <a href="#">点击查询</a>
+        </div>
+        <div class="right">
+            <span>那座让我向往的城市，只因为有你</span>
+            <span>灯火通明的城，海风轻柔的味道，淡忘的烦恼，以及心动的旋律</span>
+            <span>随着故事发展，我们相信了爱情，所以把心交给灯光，把命运交给时光</span>
+        </div>
+    </div>
+    <!--轮播结束-->
+    <!--信息展示开始-->
+    <div class="showInfo w1200">
+        <div class="info">
+            <h3 class="fa fa-envira fa-2x"><span>蒲公英的约定</span></h3>
+            <div class="text">
+                <span class="fa fa-heart">
+                    <i>那个与梦接触的地方</i>
+                    <p>我曾幻想有那么一个地方</p>
+                    <p>那里清泉甘甜</p>
+                    <p>那里寂静恬淡</p>
+                    <p>乘风飞翔的蒲公英</p>
+                    <p>带着希望与梦想飞向远方</p>
+                    <!--<img src="images/15.jpg" alt=""/>-->
+                </span>
+            </div>
+            <div class="text">
+                <span class="fa fa-heartbeat">
+                    <i>人间与炼狱只有一纸之隔</i>
+                    <p>仿佛要坠入地狱</p>
+                    <p>那深不见底的黑洞</p>
+                    <p>那恐怖呼啸的冷风</p>
+                    <p>有那么一瞬间是如此渴望光</p>
+                    <p>渴望那个让我能触及天堂的方向</p>
+                    <!--<img src="images/15.jpg" alt=""/>-->
+                </span>
+            </div>
+            <div class="text">
+                <span class="fa fa-heart">
+                    <i>伸手就能触及的天堂</i>
+                    <p>我曾幻想有那么一个地方</p>
+                    <p>那里彩虹灿烂</p>
+                    <p>那里繁星点点</p>
+                    <p>篝火唱歌的夜里相向你我</p>
+                    <p>传递着感情，相守着承诺</p>
+                    <!--<img src="images/15.jpg" alt=""/>-->
+                </span>
+            </div>
+        </div>
+    </div>
+    <!--信息展示结束-->
+    <!--图片展示-->
+    <div class="pict w1200">
+        <h2 class="fa fa-envira fa-2x">沿途风景也很好看</h2>
+        <div class="pic">
+            <span>
+                <img src="images/11.jpg" alt=""/>
+                <p><i>有的风景，美的就是它的色彩，像一副油画，也像及我们的人生</i></p>
+            </span>
+        </div>
+        <div class="pic">
+            <span>
+                <img src="images/12.jpg" alt=""/>
+                <p><i>梦境中的三生三世，透着淡淡的花香，耳边还有泉水流下的嬉笑声</i></p>
+            </span>
+        </div>
+        <div class="pic">
+            <span>
+                <img src="images/17.jpg" alt=""/>
+                <p><i>这是你喜欢的小镇，在欧洲的某个洲，或许叫不上名字，但是就是喜欢</i></p>
+            </span>
+        </div>
+        <div class="pic">
+            <span>
+                <img src="images/14.jpg" alt=""/>
+                <p><i>四季轮换，交替更息，大自然总是把最淳朴的真理，写在落叶之间</i></p>
+            </span>
+        </div>
+        <div class="pic">
+            <span>
+                <img src="images/2.jpg" alt=""/>
+                <p><i>有时候有种冲动，骑一辆摩托，带上那个人，在一条不知名的路上，向太阳疾驰</i></p>
+            </span>
+        </div>
+        <div class="pic">
+            <span>
+                <img src="images/16.jpg" alt=""/>
+                <p><i>总归是要沉静的，终究是要落叶的，秋天是成熟也是褪去激情的季节，是时候不折腾了</i></p>
+            </span>
+        </div>
+    </div>
+    <!--图片展示结束-->
+    <!--结尾部分开始-->
+    <div class="footer w1200">
+        <h2 class="fa fa-envira fa-2x">有书有猫有生活</h2>
+        <span> <img src="images/18.jpg" alt=""/></span>
+        <span>
+            <p class="top"></p>
+            <span class="bottom">
+                <h4>猫儿与你</h4>
+                <i>我喜欢有这么一本书,记录了猫儿与你的生活</i>
+                <i>从清晨 ,到下午 ,从下午 ,到夜晚</i>
+                <i>从书香轻嗅到园林淡茶</i>
+                <i>从指尖轻柔到发丝淡香</i>
+                <i>喵是你唯一的语言</i>
+                <i>点缀着喜怒哀乐,点缀着心心念念</i>
+                <i>我想与书中的喵一起生活</i>
+                <i>过着与世无争,清闲自在的日子</i>
+                <i>就你我两人,相依为命</i>
+                <i>|养猫记</i>
+            </span>
+        </span>
+        <span>
+            <img src="images/20.jpg" alt=""/>
+        </span>
+    </div>
+    <!--结尾部分开始-->
+    <div class="end w1200">
+        <span></span>
+        <h1>三生有幸 <i class="fa fa-heartbeat"></i> 四季有你</h1>
+        <span></span>
+        <h2>ENDING</h2>
+    </div>
+
+</body>
+<script src="js/Base.js"></script>
+<script>
+    //轮播盒子
+    var banner = document.querySelector(".banner");
+    var left = banner.children[0];
+    var right = banner.children[1];
+    var Lleft = banner.children[0].offsetLeft;
+    var Rleft = banner.children[1].offsetLeft;
+
+    var timer = setInterval(function () {
+        //每两秒执行一次轮播
+        var Ltarget = -banner.offsetWidth;
+        var Rtarget = 0;
+        if (Lleft == 0){
+            animate(left,{"left":Ltarget});
+            animate(right,{"left":Rtarget});
+        }
+        if (left.offsetLeft <= -banner.offsetWidth){
+            left.style.left = banner.offsetWidth + "px";
+        }
+        if (left.offsetLeft == banner.offsetWidth){
+            Ltarget = 0;
+            Rtarget = -banner.offsetWidth;
+            animate(left,{"left":Ltarget});
+            animate(right,{"left":Rtarget});
+        }
+        if (right.offsetLeft<= -banner.offsetWidth){
+            right.style.left = banner.offsetWidth + "px"
+        }
+        if (right.offsetLeft == banner.offsetWidth){
+            var Ltarget = -banner.offsetWidth;
+            var Rtarget = 0;
+            animate(left,{"left":Ltarget});
+            animate(right,{"left":Rtarget});
+        }
+    },6000)
+       //头部控制初始判断
+    var screenTop = Math.floor(scrollTop().top);
+    if (screenTop > 700){
+        document.querySelector(".header").className = "header hide";
+    }
+    if (Math.floor(scrollTop().top) > 380){
+        var  info = document.querySelector(".info");
+        var textOne = info.children[1];
+        var text = info.children[2];
+        var textTow = info.children[3];
+        var spanL = textOne.children[0];
+        var spanC = text.children[0];
+        var spanR = textTow.children[0];
+        console.log(textTow);
+        var spanW = spanL.offsetWidth;
+        spanL.style.marginLeft = -spanW/2+"px";
+        spanR.style.marginLeft = -spanW/2+"px";
+        animate(spanL,{"left":"199"});
+        animate(spanR,{"left":"199"});
+        animate(spanC,{"top":0});
+    }
+    if(Math.floor(scrollTop().top) > 717){
+        var pict = document.querySelector(".pict");
+        var pics = pict.children;
+        console.log(pics[1]);
+        var is = [];
+        for (var i=1;i<pics.length;i++){
+            is[i] = pics[i].children[0].children[1].children[0];
+            console.log(is);
+
+        }
+        animate(is[1],{"left":0});
+        animate(is[6],{"left":0});
+        animate(is[2],{"top":0});
+        animate(is[5],{"top":0});
+        animate(is[3],{"left":0});
+        animate(is[4],{"left":0});
+
+    }
+    if (Math.floor(scrollTop().top)>1450){
+        var catBottom = document.querySelector(".bottom");
+        animate(catBottom,{"left":0});
+    }
+    if (Math.floor(scrollTop().top) > 2199){
+        var endH2 =document.querySelector(".end h2");
+//            console.log(endH2);
+        animate(endH2,{"top":165});
+    }
+    //动画起始
+    window.onscroll = function () {
+        //头部控制最终判断
+        if (Math.floor(scrollTop().top) > 700){
+            document.querySelector(".header").className = "header hide";
+        }else{
+            document.querySelector(".header").className = "header show";
+        }
+        //fly
+        if (Math.floor(scrollTop().top) > 380){
+            var  info = document.querySelector(".info");
+            var textOne = info.children[1];
+            var text = info.children[2];
+            var textTow = info.children[3];
+            var spanL = textOne.children[0];
+            var spanC = text.children[0];
+            var spanR = textTow.children[0];
+            console.log(textTow);
+            var spanW = spanL.offsetWidth;
+            spanL.style.marginLeft = -spanW/2+"px";
+            spanR.style.marginLeft = -spanW/2+"px";
+            animate(spanL,{"left":"199"});
+            animate(spanR,{"left":"199"});
+            animate(spanC,{"top":0});
+        }
+        //run
+        if(Math.floor(scrollTop().top) > 717){
+            var pict = document.querySelector(".pict");
+            var pics = pict.children;
+            console.log(pics[1]);
+            var is = [];
+            for (var i=1;i<pics.length;i++){
+                is[i] = pics[i].children[0].children[1].children[0];
+                console.log(is);
+
+            }
+            animate(is[1],{"left":0});
+            animate(is[6],{"left":0});
+            animate(is[2],{"top":0});
+            animate(is[5],{"top":0});
+            animate(is[3],{"left":0});
+            animate(is[4],{"left":0});
+
+        }
+        console.log(Math.floor(scrollTop().top));
+        //cat
+        if (Math.floor(scrollTop().top)>1450){
+            var catBottom = document.querySelector(".bottom");
+            animate(catBottom,{"left":0});
+        }
+        //end
+//        console.log(Math.floor(scrollTop().top));
+        if (Math.floor(scrollTop().top) > 2199){
+            var endH2 =document.querySelector(".end h2");
+//            console.log(endH2);
+            animate(endH2,{"top":165});
+        }
+    }
+
+    banner.onmouseover = function () {
+        //小箭头出现
+    }
+
+</script>
+</html>

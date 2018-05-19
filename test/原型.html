@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        /*
+        * 原型是干嘛的：
+        * 1.原型用来共享构造函数资源，
+        * 2.从而达到节约空间的作用
+        * 3.原型的创建方法prototype
+        * */
+
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+        }
+
+        Person.prototype.eat = function () {
+            console.log(1);
+        }
+
+        var per1 =new Person("x",20);
+        var per2 =new Person("y",30);
+        //对象是不一样的
+        console.log(per1==per2);
+        //方法是一样的
+        console.log(per1.eat == per2.eat);
+        console.log(per1.__proto__.eat());
+        console.log(per2.__proto__.eat());
+
+        //查看对象
+        console.dir(per1);
+        console.dir(per2);
+        //方法现在在__proto__里（原型里）
+        console.dir(per1.__proto__.eat);
+        console.dir(per2.__proto__.eat);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

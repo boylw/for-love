@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 200px;
+            height: 150px;
+            margin: 100px auto;
+            border: 1px solid #8f47ff;
+            background-color: #8f47ff;
+        }
+    </style>
+
+</head>
+<body>
+<input type="button" value="变色"/>
+<div class="box"></div>
+</body>
+<script>
+    //面向过程是：找到元素。改变样式
+
+    //面向对象---初级
+    /**
+    function ChangeStyle(btnId,boxId,color){
+        this.btnId = document.querySelector(btnId);
+        this.boxId = document.querySelector(boxId);
+        this.color = color;
+    }
+
+    ChangeStyle.prototype.init = function () {
+        //这里的this就是当前对象sc
+        var that = this;
+        this.btnId.onclick = function () {
+            //这里面的this是btn
+            that.boxId.style.background = that.color;
+        }
+    }
+    //实例化对象
+    var sc = new ChangeStyle("input",".box","red");
+    sc.init();
+    */
+
+
+    //面向对象---中级
+    /*
+    * btn点击的对象
+    * obj改变的元素对象
+    * json改变的样式json数组
+    * */
+    function ChangeStyle(btn,obj,json){
+        this.btn= btn;
+        this.obj = obj;
+        this.json = json;
+    }
+
+    ChangeStyle.prototype.init = function () {
+        var that = this;
+        this.btn.onclick = function () {
+            for (var attr in that.json){
+                that.obj.style[attr] = that.json[attr];
+            }
+        }
+    }
+
+    var json = {"width":"250px","height":"250px","opacity":"0.2","backgroundColor":"purple"};
+
+    var obj1 = new ChangeStyle(document.querySelector("input"),document.querySelector(".box"),json);
+    obj1.init();
+</script>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Z</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <script src="js/Base.js"></script>
+    <script src="js/jquery-1.11.1.mins.js"></script>
+    <style>
+        body {
+            /*overflow: hidden;*/
+        }
+        .way{
+            position: fixed;
+            right: 0;
+            top: 235px;
+            /*margin-top: -397px;*/
+            width: 50px;
+            /*height: 200px;*/
+            overflow: hidden;
+            border: 1px solid #ff7c74;
+            text-align: center;
+        }
+        .way .line {
+            width: 1px;
+            height: 600px;
+            background-color: #f0f0f0;
+            margin-left: 9px;
+        }
+        .way span{
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #fff;
+            border-radius:50%;
+            display: block;
+            margin-top: 17px;
+            margin-left: 7px;
+            overflow:hidden;
+            color: #f0f0f0;
+            text-shadow: 1px 1px 1px 0px #ccc;
+            font-size: 14px;
+            font-family: "微软雅黑";
+            font-weight: bold;
+            line-height: 30px;
+        }
+        section{
+            width: 100%;
+            height: 794px;
+            background-color: rgba(39, 44, 200, 0.2);
+        }
+
+        /*头部start*/
+        .headers .he{
+            width: 100%;
+            height: 70px;
+            /*border: 1px solid #000;*/
+        }
+        .headers .nav{
+            height: 500px;
+            margin-top: 20px;
+            position: relative;
+        }
+        .headers .nav>ul{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .headers .nav>ul>li{
+            width: 1200px;
+            height: 500px;
+            border: 1px solid #8f47ff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .headers .nav>ul>li:nth-of-type(1){
+            background-image: url("images/22.jpg");
+            z-index: 3;
+        }
+        .headers .nav>ul>li:nth-of-type(2){
+            background-image: url("images/23.jpg");
+            left: 1200px;
+        }
+
+        .headers .text{
+            position: absolute;
+            left: 28%;
+            top: 208px;
+            overflow: hidden;
+            z-index: 4;
+            text-align: center;
+
+        }
+        .headers .text:hover i{
+            animation:margins 3s;
+        }
+
+        .headers .text p{
+            font-size: 24px;
+            color: rgba(200, 58, 17, 0.4);
+            font-weight: 600;
+            font-family: sans-serif;
+
+
+        }
+        .headers .text p:nth-of-type(1){
+            font-size: 65px;
+        }
+        .headers .text p:nth-of-type(1) i{
+            text-shadow: 1px 1px 0 0 #a438cc;
+        }
+        @keyframes margins {
+            0%{
+                margin:0px;
+                color: rgba(200, 58, 17, 0.4);
+
+            }
+            50%{
+                margin:0 10px;
+                color: rgba(34, 200, 58, 0.4);
+            }
+            100%{
+                margin:0px;
+                color: rgba(200, 58, 17, 0.4);
+            }
+        }
+
+        .headers .info{
+            /*width: 400px;*/
+            height: 193px;
+            /*background-color: #8f47ff;*/
+            margin: 10px auto 0 auto;
+            position: relative;
+            border: 1px solid #1d17ff;
+        }
+
+        .headers .info span{
+            position: absolute;
+            height: 20px;
+            bottom: 36px;
+            left: 48%;
+            border: 1.2px dashed #8f47ff;
+        }
+        .headers .info i{
+            position: absolute;
+            bottom: 13px;
+            left: 47%;
+            font-size: 45px;
+            color: #8f47ff;
+            font-weight: 100;
+            cursor: pointer;
+        }
+        .headers .info i:hover{
+            color: #a438cc;
+        }
+        /*头部end*/
+    </style>
+</head>
+<body>
+<!--这是分页面：几年每一年的路程-->
+<div class="way">
+    <span>one</span>
+    <span>tow</span>
+    <span>three</span>
+    <span>four</span>
+    <span>five</span>
+</div>
+<!--第一部分-->
+<section class="headers">
+    <div class="header">
+        <div class="w1200">
+            <div class="left">
+                <h1 class="fa fa-heart-o">Web Love</h1>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="#">love</a></li>
+                    <li><a href="#">Z</a></li>
+                    <li><a href="#">H</a></li>
+                    <li><a href="#">Y</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="he"></div>
+    <div class="nav w1200">
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+        <span class="text">
+            <p><i>柔</i><i>情</i><i>似</i><i>水</i>,<i>佳</i><i>期</i><i>如</i><i>梦</i></p>
+            <p>两情若是长久时，又岂在朝朝幕幕</p>
+        </span>
+    </div>
+    <div class="info w1200">
+        <ul>
+            <li><img src="" alt=""/></li>
+        </ul>
+        <span></span>
+        <i class="fa fa-angle-down"></i>
+    </div>
+</section>
+<!--第二部分-->
+<section class="body" style="background-color:rgba(46, 200, 84, 0.2)">
+
+</section>
+<!--第三部分-->
+<section class="three" style="background-color:rgba(200, 19, 15, 0.2)">
+
+</section>
+<!--第四部分-->
+<section class="four" style="background-color:rgba(16, 66, 200, 0.2)">
+
+</section>
+<!--第五部分-->
+<section class="five" style="background-color: rgba(174, 200, 27, 0.2)">
+
+</section>
+
+</body>
+<script>
+    function scroll(){
+        if (window.pageYOffset!=null){
+            return {
+                left : window.pageXOffset,
+                top : window.pageYOffset
+            }
+        }else if(document.compatMode == "CSS1compat"){
+            return {
+                top : document.documentElement.scrollTop,
+                left : document.documentElement.scrollLeft
+            }
+        }else{
+            return{
+                left : document.body.scrollLeft,
+                top : document.body.scrollTop
+            }
+        }
+    }
+    var Height = document.querySelector(".headers").offsetHeight;
+//    console.log(Height);
+    var spans = document.querySelectorAll(".way span");
+    for (var i=0;i<spans.length;i++){
+        //位每一个spans添加动画
+        spans[i].index = i;
+        spans[i].onclick = function () {
+            $('html,body').animate({scrollTop:(this.index * Height)}, 800);
+        }
+    }
+    var info = document.querySelector(".info i");
+    info.onclick = function () {
+        $('html,body').animate({scrollTop:(1 * Height)}, 800);
+    }
+
+    //自动播放动画函数
+    var lis = document.querySelectorAll(".nav li");
+    var nav = document.querySelector(".nav");
+    var is = document.querySelectorAll(".text i");
+    //    console.log(lis);
+    var autoAm = function (){
+        var timer = setInterval(auto,2000);
+        function auto() {
+            if (lis[0].offsetLeft == 0){
+                animate(lis[0],{left:-1201});
+                animate(lis[1],{left:0});
+            }
+            if (lis[0].offsetLeft == -1201){
+                lis[0].style.left = 1201 + 'px';
+                animate(lis[1],{left:-1201});
+                animate(lis[0],{left:0});
+            }
+            if (lis[1].offsetLeft == -1201){
+                lis[1].style.left = 1201 + "px";
+                animate(lis[0],{left:-1201});
+                animate(lis[1],{left:0});
+            }
+        }
+//        nav.onmouseover = function () {
+//            clearInterval(timer);
+//        }
+//        nav.onmouseout = function () {
+//            timer = setInterval(auto,2000);
+//        }
+    }();
+    document.onscroll = function () {
+        var scrolls = Math.floor(scroll().top);
+        console.log(scrolls);
+    }
+
+    //字体操作
+    function getColor(){
+        return '#'+Math.floor(Math.random()*256).toString(10);
+    }
+</script>
+</html>

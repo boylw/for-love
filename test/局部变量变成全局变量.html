@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+
+//    //自调用函数
+//    (function (window) {
+//        var num = 10;//局部变量
+//        window.num = num;
+//    })(window)
+//    //console.log(num)//报错
+//    console.log(num);
+
+    //通过自调用函数产生随机数
+
+    (function (window) {
+        //构造函数
+        function Random(){}
+        Random.prototype.getRandom = function () {
+            var random = Math.floor(Math.random() * 100);
+            return random;
+        }
+        window.Random = Random;
+    })(window);
+    var random = new Random();
+    console.log(random);
+</script>
+</html>

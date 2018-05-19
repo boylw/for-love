@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    function Student(age,name){
+        this.age = age;
+        this.name = name;
+    }
+
+    Student.prototype = {
+        //手动修改构造器
+//        constructor:Student,
+        constructor:Student,
+        height : "188",
+        weight : "55",
+        study : function () {
+            console.log("1");
+        },
+        eat : function () {
+            console.log("2")
+        }
+    }
+
+    var studuent = new Student("20","小明");
+
+    console.log(studuent.age);
+    console.log(studuent.name);
+    studuent.study();
+    console.dir(Student);
+    console.dir(studuent);
+
+    var date = new Date();
+    var s = date.getDate();
+    document.write(s);
+</script>
+</html>

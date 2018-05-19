@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .map{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="map"></div>
+</body>
+<script>
+    var map = document.querySelector(".map");
+    map.style.width = 800 + "px";
+    map.style.height = 600 + "px";
+    map.style.margin = "100px auto";
+    map.style.background = "gray";
+    map.style.position = "relative";
+    //这是一个自调用函数，创建随机数
+    (function (window) {
+        //构造函数
+        function Random(){
+        }
+        Random.prototype.getRandom = function (min,max) {
+            var max = max;
+            var min = min;
+            return Math.floor(Math.random(0,max-min)*max);
+        }
+        window.Random =Random;
+    })(window);
+    //产生小方块
+    (function (window) {
+        //小方块的构造函数
+        function LittleBox(width,height,color){
+            this.height = height || 20;
+            this.width = width || 20;
+            this.color = color || "block";
+        };
+        //小方块生成
+        LittleBox.prototype.createBox = function () {
+            //创建小方块
+            var littelBox = document.createElement("div");
+            littelBox.style.width = this.width + "px";
+            littelBox.style.height = this.height + "px";
+            littelBox.style.background = this.color;
+            littelBox.style.position = "absolute";
+//            littelBox.style.left = random.
+//            littelBox.style.top =
+            map.appendChild(littelBox);
+            //调用显示小方块
+            this.showBox(littelBox);
+        }
+        //显示小方块
+        LittleBox.prototype.showBox = function (littelBox) {
+            //实例化随机数对象
+            var random = new Random();
+            //随机产生x，y值
+            var x =random.getRandom(0,(map.offsetWidth/this.width))*this.width;
+            var y =random.getRandom(0,(map.offsetHeight/this.height))*this.height;
+            //调用x，y值
+            littelBox.style.left = x + "px";
+            littelBox.style.top = y + "px";
+        }
+        window.LittleBox = LittleBox;
+    })(window);
+
+    var l = new LittleBox(20,20,"yellow");
+    l.createBox();
+</script>
+</html>
